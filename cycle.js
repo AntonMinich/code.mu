@@ -448,3 +448,170 @@ for (let key in stringsObj) {
 }
 
 console.log(newObj2);
+
+
+// Создайте объект с числовыми значениями и напишите код, который найдет и выведет в консоль ключ элемента с максимальным значением.
+let maxObj = {p: 15, q: 8, r: 25, s: 12, t: 30};
+
+let resMaxObj = 0;
+for(let keys in maxObj) {
+    if (maxObj[keys] > resMaxObj) {
+        resMaxObj = maxObj[keys];
+    }
+}
+console.log(resMaxObj);
+
+// Создайте объект с числовыми значениями и напишите код, который умножит все значения на определенное число (например, 2) и выведет новый объект в консоль.
+let multiplyObj = {a: 4, b: 6, c: 8, d: 2};
+let arrayKey = Object.keys(multiplyObj);
+let resMultiplyObj = {};
+for (let i = 0; i < arrayKey.length; i++) {
+    
+    resMultiplyObj[arrayKey[i]] = multiplyObj[arrayKey[i]] * 2;
+}
+console.log(resMultiplyObj);
+
+
+// Создайте объект с текстовыми значениями и напишите код, который объединит все строки в одну и выведет её в консоль.
+
+let stringObj = {firstName: 'John', lastName: 'Doe', occupation: 'Engineer'};
+let strRes = '';
+for (let keys in stringObj) {
+    strRes += stringObj[keys] + ' ';
+}
+console.log(strRes);
+
+// Создайте объект с текстовыми значениями и напишите код, который выведет в консоль длину каждой строки.
+let lengthsObj = {str1: 'Hello', str2: 'JavaScript', str3: 'World'};
+for (let keys in lengthsObj) {
+    console.log(lengthsObj[keys].length);
+}
+
+// Создайте объект с числовыми значениями и напишите код, который выведет в консоль сумму всех четных чисел.
+let evenNumbersObj = {a: 5, b: 10, c: 8, d: 3, e: 6};
+let resEvenNumbersObj = 0;
+for (let keys in evenNumbersObj) {
+        resEvenNumbersObj += evenNumbersObj[keys];
+}
+console.log(resEvenNumbersObj);
+
+
+// Создайте объект с числовыми значениями и напишите код, который найдет и выведет в консоль ключ элемента с минимальным значением.
+let minObj = {p: 15, q: 8, r: 25, s: 12, t: 7, g: 9};
+let keyMinObj = Infinity;
+for (let keys in minObj) {
+        if (keyMinObj > minObj[keys]) {
+            keyMinObj = minObj[keys];
+        }
+}
+console.log(keyMinObj);
+
+
+// Создайте объект с числовыми значениями и напишите код, который удалит все элементы с четными значениями и выведет новый объект в консоль.
+let oddNumbersObj = {x: 3, y: 7, z: 5, w: 2, f: 4};
+for (let keys in oddNumbersObj) {
+    if (oddNumbersObj[keys] % 2 != 0) {
+        delete oddNumbersObj[keys];
+    }
+}
+console.log(oddNumbersObj);
+
+
+// Создайте объект с текстовыми значениями и напишите код, который вычислит среднюю длину всех строк в объекте.
+let stringsObj2 = {str1: 'Hello', str2: 'JavaScript', str3: 'World'};
+
+let resStringsObj2 = 0;
+let devider = Object.keys(stringsObj2).length;
+
+for (let keys in stringsObj2){
+    resStringsObj2 += stringsObj2[keys].length;
+}
+
+console.log(Math.floor(resStringsObj2/devider));
+
+// Создайте объект с числовыми значениями и напишите код, который вычислит сумму всех значений в объекте.
+
+let numbersObj2 = {a: 5, b: 10, c: 8, d: 3};
+
+let sumNumbersObj2 = 0;
+
+for (let keys in numbersObj2) {
+    sumNumbersObj2 += numbersObj2[keys];
+}
+console.log(sumNumbersObj2);
+
+// Создайте объект с текстовыми и числовыми значениями. Напишите код, который создаст новый объект, содержащий только строки из исходного объекта.
+
+let mixedObj = {name: 'John', age: 25, city: 'New York', job: 'Developer'};
+let newMixeObj = {};
+for (let keys in mixedObj) {
+    if (!isNaN(Number(mixedObj[keys]))) {
+        newMixeObj[keys] = mixedObj[keys];
+    }
+}
+
+console.log(newMixeObj);
+
+
+// Создайте объект с текстовыми значениями и напишите код, который преобразует все ключи объекта в верхний регистр.
+let lowerCaseObj = {firstName: 'john', lastName: 'doe', age: 30};
+let upperCaseObj = {};
+for (let keys in lowerCaseObj) {
+    let upperKey = keys.toUpperCase();
+    upperCaseObj[upperKey] = lowerCaseObj[keys];
+}
+
+console.log(upperCaseObj);
+
+// Создайте два объекта и напишите код, который объединит их в один новый объект.
+let objOne = {a: 1, b: 2};
+let objTwo = {c: 3, d: 4};
+
+let objThree = Object.assign(objOne, objTwo);
+console.log(objThree);
+
+// Создайте объект с числовыми значениями и напишите код, который увеличит все значения в объекте на определенное число (например, 5).
+let numbersObj3 = {x: 10, y: 15, z: 20};
+let incrementBy = 5;
+for (let key in numbersObj3) {
+    numbersObj3[key] += incrementBy;
+}
+console.log(numbersObj3);
+
+// Создайте объект с числовыми значениями и напишите код
+// , который создаст новый объект, содержащий только те значения, которые больше определенного порога (например, больше 15).
+
+let originalObj = {a: 10, b: 20, c: 25, d: 30};
+let threshold = 15;
+
+let resultOriginalObj = {};
+
+for (let key in originalObj) {
+    if (originalObj[key] > threshold) {
+        resultOriginalObj[key] = originalObj[key];
+    }
+}
+
+console.log(resultOriginalObj);
+
+
+// Создайте объект с текстовыми значениями и напишите код, который подсчитает количество повторяющихся значений.
+let textObj = {word1: 'apple', word2: 'orange', word3: 'apple', word4: 'banana'};
+let uniqueWordCount = [];
+
+for (let key in textObj) {
+       if (!uniqueWordCount.includes(textObj[key])) {
+        uniqueWordCount.push(textObj[key]);
+    }
+}
+
+console.log(uniqueWordCount);
+console.log(uniqueWordCount.length);
+
+
+// Создайте объект с текстовыми значениями и напишите код, который объединит все значения в одну строку.
+let stringObj4 = {part1: 'Hello', part2: ' JavaScript', part3: ' World'};
+let strRes2 = Object.values(stringObj4).join(' ');
+console.log(strRes2);
+
+
