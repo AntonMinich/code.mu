@@ -614,4 +614,359 @@ let stringObj4 = {part1: 'Hello', part2: ' JavaScript', part3: ' World'};
 let strRes2 = Object.values(stringObj4).join(' ');
 console.log(strRes2);
 
+// Объедините два массива (arr1 и arr2) в один новый массив.
+let arr6 = [1, 2, 3];
+let arr7 = [4, 5, 6];
+let resArr = arr6.concat(arr7);
+console.log(resArr);
 
+
+// Создайте новый массив, в который включите только те числа из исходного массива, которые делятся на 5.
+
+let numbers = [1, 10, 15, 20, 25, 30];
+let newNumbers = [];
+for (let elem of numbers) {
+    if (elem % 2 == 0) {
+        newNumbers.push(elem);
+    }
+}
+console.log(newNumbers);
+
+// Обновите возраст пользователя (user) на 26 и добавьте новое поле gender со значением 'female'.
+let user = { name: 'Alice', age: 25, city: 'Wonderland' };
+user.age = 26;
+user.female = 'Woman';
+
+console.log(user);
+
+// Создайте новый массив, в который включите только тех людей из исходного массива, которые старше 30 лет.
+
+let people = [
+    { name: 'Bob', age: 30, gender: 'male' },
+    { name: 'Alice', age: 25, gender: 'female' },
+    { name: 'Charlie', age: 35, gender: 'male' }
+  ];
+
+let newPeople = [];
+for (let elem of people) {
+    if(elem.age >= 30) {
+        newPeople.push(elem);
+    }
+}
+console.log(newPeople);
+
+// С помощью цикла создайте объект, ключами которого будут названия дней, а значениями - их номера.
+
+let arr10 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+let arr20 = [1, 2, 3, 4, 5, 6, 7];
+let objArr = {};
+for (let i = 0; i < arr10.length; i++) {
+    objArr[arr10[i]] = arr20[i];
+}
+console.log(objArr);
+
+// Переберите этот объект циклом и запишите в новый объект те элементы, которые являются четными числами.
+let obj23 = {a: 1, b: 2, c: 3, d: 4, e: 5};
+let obj23New = {};
+for (let key in obj23) {
+    if (obj23[key] % 2 == 0) {
+        obj23New[key] = obj23[key];
+    }
+}
+console.log(obj23New);
+
+// Переберите этот объект циклом и создайте новый объект так, чтобы его ключами стали элементы старого объекта, а значениями - ключи старого объекта.
+let obj34 = {a: 1, b: 2, c: 3, d: 4, e: 5};
+let obj34New = {};
+
+for (let key in obj34) {
+    obj34New[obj34[key]] = key;
+}
+console.log(obj34New);
+
+// Переберите этот объект циклом и возведите каждый элемент этого объекта в квадрат.
+let obj35 = {x: 1, y: 2, z: 3};
+for (let key in obj35) {
+    obj35[key] = obj35[key] ** 2;
+}
+console.log(obj35);
+
+// Переберите этот объект циклом и увеличьте каждый элемент этого объекта на единицу.
+obj35 = {x: 1, y: 2, z: 3};
+for (let key in obj35) {
+    obj35[key] = obj35[key] + 1;
+}
+console.log(obj35);
+
+// Проверьте, что в этом массиве есть элемент 'c'. Если есть - выведите '+++', а если нет - выведите '---'.
+let arrFlag = ['a', 'b', 'c', 'd', 'e', 'c'];
+for (let elem of arrFlag) {
+    let flag = false;
+    if (elem == 'c') {
+        flag = true;
+        break
+    }
+    if(flag = true) {
+        console.log('+++');
+    } else {
+        console.lof('---');
+    }
+}
+
+// Напишите код, который будет проверять число на то, простое оно или нет.
+//  Простое число делится только на единицу и на само себя, и не делится на другие числа.
+
+let number = 9;
+let flag = true;
+
+    for (let i = 2; i <= number-1; i++) {
+        if (number % i === 0) {
+            flag = false;
+            break;
+        }
+    }
+    
+if (flag === true) {
+        console.log('простое число');
+    } else {
+        console.log('не простое число')
+    }
+
+
+ // Возьмите из этого массива те элементы, у которых первая цифра 1 или 2, и найдите их сумму.
+ let arrSum = [10, 20, 30, 40, 21, 32, 51];
+ let resultSum = 0;
+ for (let elem of arrSum) {
+    if (String(elem)[0] == 1 || String(elem)[0] == 2) {
+        resultSum += elem;
+    }
+ }
+ console.log(resultSum);
+
+// Выведите с помощью цикла столбец чисел от 1 до 100.
+for (let i = 1; i <= 100; i++){
+    console.log(i);
+}
+
+// Выведите с помощью цикла столбец чисел от 100 до 1.
+for(let i = 100; i > 0; i--) {
+    console.log(i);
+}
+
+// Выведите с помощью цикла столбец четных чисел от 1 до 100.
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
+
+// Заполните массив 10-ю иксами с помощью цикла.
+
+let arrX = [];
+for (let i = 0; i <= 10; i++) {
+    arrX.push('x');
+}
+console.log(arrX);
+
+// Заполните массив числами от 1 до 10 с помощью цикла.
+let arrNum = [];
+for (let i = 1; i <= 10; i++) {
+    arrNum.push(i);
+}
+console.log(arrNum);
+
+// Дан массив с числами. С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти.
+let arrNumbers = [1, 32, 45, 5, 24, -43, 0, 3, 4, 345];
+for (let elem of arrNumbers) {
+    if (elem > 0 && elem < 10) {
+        console.log(elem);
+    }
+}
+
+// Дан массив с числами. С помощью цикла проверьте, что в нем есть элемент со значением 5.
+let arrNumbers2 = [23, 34, 4, 3, 6, 5];
+let resArrNumbers2 = arrNumbers2.includes(5);
+for (let elem of arrNumbers2) {
+    if (elem == 5) {
+        console.log('есть');
+    }
+}
+console.log(resArrNumbers2);
+
+// Дан массив с числами. С помощью цикла найдите сумму элементов этого массива.
+arrNumbers2 = [23, 34, 4, 3, 6, 5];
+let resSumNum = 0;
+for (let elem of arrNumbers2) {
+    resSumNum += elem;
+}
+console.log(resSumNum);
+
+// Дан массив с числами. С помощью цикла найдите сумму квадратов элементов этого массива.
+arrNumbers2 = [23, 34, 4, 3, 6, 5];
+resSumNum = 0;
+for (let elem of arrNumbers2) {
+    resSumNum += elem ** 2;
+}
+console.log(resSumNum);
+
+// Дан массив с числами. Найдите среднее арифметическое его элементов.
+arrNumbers2 = [23, 34, 4, 3, 6, 5];
+let resNum = 0;
+for (let elem of arrNumbers2) {
+    resNum += elem;
+}
+console.log(resNum/arrNumbers2.length);
+
+// Напишите скрипт, который будет находить факториал числа. Факториал - это произведение всех целых чисел от единицы до заданного числа.
+let number2 = 5;
+let factorial = 1;
+for (let i = 1; i <= number2; i++) {
+    factorial *= i;
+}
+console.log(factorial);
+
+// Заполните массив числами от 10 до 1 с помощью цикла.
+let wrapArr = [];
+for (let i = 10; i > 0; i--) {
+    wrapArr.push(i);
+}
+console.log(wrapArr);
+
+
+// Дан массив с числами. Числа могут быть положительными и отрицательными. Найдите сумму положительных элементов массива.
+
+arrNumbers = [1, 32, 45, 5, 24, -43, 0, 3, 4, -520];
+let sumArrNumbers = 0;
+for (let elem of arrNumbers) {
+    if (elem > 0) {
+        sumArrNumbers += elem;
+    }
+}
+
+console.log(sumArrNumbers);
+
+
+// Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или 5.
+arr = [10, 20, 30, 50, 235, 3000];
+for (let elem of arr) {
+    if (String(elem)[0] == 1 || String(elem)[0] == 2 || String(elem)[0] == 5) {
+        console.log(elem);
+    }
+}
+
+// Дан массив с числами. Выведите элементы этого массива в обратном порядке.
+arr = [10, 20, 30, 50, 235, 3000];
+for (let i = arr.length; i >= 0; i--) {
+    console.log(arr[i]);
+}
+
+// Дан массив с числами. С помощью цикла выведите на экран все элементы, значение которых совпадает с их порядковым номером в массиве.
+arr = [2, 1, 3, 4, 2, 5, 6, 3, 5, 8];
+for (let i = 0; i < arr.length; i++) {
+    if (i == arr[i]) {
+        console.log(i);
+    }
+}
+
+// Дан следующий объект с работниками и их зарплатами: Увеличьте зарплату каждого работника на 10%.
+
+obj = {
+	employee1: 100,
+	employee2: 200,
+	employee3: 300,
+	employee4: 400,
+	employee5: 500,
+	employee6: 600,
+	employee7: 700,
+};
+
+for (let key in obj) {
+    obj[key] += obj[key] * 0.1;
+}
+console.log(obj);
+
+// Модифицируйте предыдущую задачу так, чтобы зарплата увеличивалась только тем работникам, у которых она меньше или равна 400.
+obj = {
+	employee1: 100,
+	employee2: 200,
+	employee3: 300,
+	employee4: 400,
+	employee5: 500,
+	employee6: 600,
+	employee7: 700,
+};
+
+for (let key in obj) {
+    if (obj[key] <= 400) {
+        obj[key] += obj[key] * 0.1;
+    }
+}
+console.log(obj);
+
+// С помощью этих массивов создайте новый объект, сделав его ключами элементы первого массива, а значениями - элементы второго.
+
+ let arr1 = [1, 2, 3, 4, 5];
+ arr2 = [6, 7, 8, 9, 10];
+ obj = {};
+ for (let i = 0; i < arr1.length; i++) {
+    obj[arr1[i]] = arr2[i]; 
+ }
+ console.log(obj);
+
+//  Найдите сумму ключей этого объекта и поделите ее на сумму значений.
+obj = {1: 6, 2: 7, 3: 8, 4: 9, 5: 10};
+let sumKey = 0;
+let sumElem = 0;
+
+for (let key in obj) {
+    sumKey += Number(key);
+    sumElem += obj[key];
+}
+res = sumElem / sumKey;
+console.log(res);
+
+
+// Запишите ключи этого объекта в один массив, а значения - в другой.
+obj = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+arr1 = [];
+arr2 = [];
+for (let key in obj) {
+    arr1.push(key);
+    arr2.push(obj[key]);
+}
+console.log(arr1);
+console.log(arr2);
+
+// Дан объект. Запишите в новый массив элементы, значение которых начинается с цифры 1 или цифры 2. 
+obj = {
+	1: 125,
+	2: 225,
+	3: 128,
+	4: 356,
+	5: 145,
+	6: 281,
+	7: 452,
+};
+arr = [];
+for (let key in obj) {
+    if (String(obj[key])[0] == 1 || String(obj[key])[0] == 2) {
+        arr.push(obj[key]);
+    }
+}
+console.log(arr);
+
+// Дан следующий массив:['a', 'b', 'c', 'd', 'e']; Создайте из этого массива следующий объект:{1: 'a', 2: 'b', 3: 'c', 4: 'd', 5: 'e'};
+arr = ['a', 'b', 'c', 'd', 'e'];
+obj = {};
+for (let i = 0; i < arr.length; i++) {
+    obj[i+1] = arr[i];
+}
+console.log(obj);
+
+// Дан следующий массив: ['a', 'b', 'c', 'd', 'e']; Создайте из этого массива следующий объект: {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5};
+arr = ['a', 'b', 'c', 'd', 'e'];
+obj = {};
+for (let i = 0; i < arr.length; i++) {
+    obj[arr[i]] = i + 1;
+}
+console.log(obj);
