@@ -298,3 +298,143 @@ for (let i = 0; i < arr.length; i++) {
     }
 }
 console.log(newStr.trim());
+
+// Переведите в верхний регистр все подстроки, в которых количество букв меньше или равно трем. В нашем случае должно получится следующее:
+string = 'a bc def ghij';
+arr = string.split(' ');
+newArr = [];
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length <= 3) {
+        newArr.push(arr[i].toUpperCase()) 
+    } else {
+        newArr.push(arr[i]);
+    }
+}
+newString = newArr.join(' ');
+console.log(newString);
+
+// Дан символ. Узнайте, в каком регистре этот символ - в верхнем или нижнем.
+let symbol = 'L';
+if (symbol == symbol.toUpperCase()) {
+    console.log('++');
+} else {
+    console.log('--');
+}
+
+// Удалите из этого числа все нечетные цифры. В нашем случае получится такой результат:
+number = 123789;
+string = String(number);
+newString = '';
+for (let i = 0; i < string.length; i++) {
+    if(string[i] % 2 == 0 ) {
+        newString += string[i];
+    }
+}
+let newNumber = Number(newString);
+console.log(newNumber);
+
+// Дана строка с буквами. Проверьте, что в этой строке не более двух заглавных букв.
+string = 'RadioPotok';
+count = 0;
+arr = string.split('');
+for (let elem of arr) {
+    if (elem == elem.toUpperCase()){
+        count++;
+        if (count > 2) {
+            console.log('В строке больше двух заглавных букв');
+            break;
+        }
+    }
+    
+}
+console.log('В строке' + ' ' + count + ' ' + 'заглавные буквы');
+
+
+// Удалите из этой строки все подстроки, в которых количество символов больше трех. В нашем случае должно получится следующее:
+string = '1 22 333 4444 22 5555 1';
+arr = string.split(' ');
+newArr = [];
+for (let elem of arr) {
+    if (elem.length <= 3) {
+        newArr.push(elem);
+    }
+}
+newString = newArr.join(' ');
+console.log(newString);
+
+
+// Слейте эти массивы в новый массив следующим образом: [1, 2, 'a', 'b', 'c', 3]
+arr1 = [1, 2, 3];
+arr2 = ['a', 'b', 'c'];
+let resArr = (arr1.slice(0,2).concat(arr2) +','+ arr1.slice(2)).split(',');
+console.log(resArr);
+
+
+// Найдите сумму пар цифр этого числа. В нашем случае имеется ввиду следующее:
+number = 123456;
+arr = String(number).split('');
+newArr = [];
+sum = 0;
+for (let i = 0; i < arr.length; i +=2) {
+    newArr.push(arr[i] + arr[i+1]);
+    for (let j = 0; j < newArr.length; j++) {
+        sum += +newArr[j];
+    }
+}
+console.log(newArr);
+console.log(sum);
+
+
+// Выведите в консоль элементы этого массива в обратном порядкe
+arr = [1, 2, 3, 4, 5];
+for (let elem of arr.reverse()) {
+    console.log(elem);
+}
+
+
+// Дана строка с буквами и цифрами. Проверьте, что в этой строке не более трех букв.
+string = '123y23ew434324';
+count = 0;
+for (let elem of string) {
+    if (elem != Number(elem)) {
+        count++;
+    }
+}
+if (count > 3) {
+    console.log('Тут больше трех букв');
+} else {
+    console.log('Тут ' +  count + ' буквы');
+}
+
+// Дано число. Получите первую четную цифру с конца этого числа.
+number = 123456789;
+string = String(number);
+res = 0;
+for (let i = string.length; i >= 0; i--) {
+    if (string[i] % 2 == 0) {
+        res = string[i];
+        break;
+    }
+}
+console.log(res);
+
+
+// Дана некоторая строка: 'abcde abcde abcde' Замените в ней первый символ каждого слова на '!': '!bcde !bcde !bcde'
+string = 'abcde abcde abcde';
+arr = string.split(' ');
+newString = '';
+for (let i = 0; i < arr.length; i++) {
+    newString += '!' + arr[i].slice(1) + ' ';
+}
+console.log(newString.trim());
+
+// Проверьте, что в этом массиве есть два одинаковых элемента подряд.
+arr = [1, 2, 3, 3, 4, 5];
+for (let i = 0; i < arr.length; i++) {
+    for (let j = i+1; j < arr.length; j++) {
+        if (arr[i] == arr[j]) {
+            console.log(arr[i]);
+            break;
+        }
+    }
+}
