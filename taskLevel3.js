@@ -56,5 +56,41 @@ for (let i = count; i < arr.length; i+=count) {
 console.log(arr);
 
 
+// Сделайте строку, содержащую столько нулей, сколько указано в переменной. 
+let num = 5;
+let string = ''
+for (let i = 0; i < num; i++) {
+    string += '0';
+}
+console.log(string);
 
+
+num = 5;
+string = '0'.repeat(5);
+console.log(string);
+
+
+// Удалите из этой строки каждое второе слово.
+string = 'aaa bbb ccc eee fff';
+arr = string.split(' ');
+for (let i = 1; i < arr.length; i+=2) {
+    arr.splice(i,1);
+    i--;
+}
+console.log(arr.join(' '));
+
+
+// Найдите сумму элементов этого массива.
+arr = [
+	[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9],
+];
+let sum = 0;
+for (let elem of arr) {
+    for (let subElem of elem) {
+        sum += subElem;
+    }
+}
+console.log(sum);
 
