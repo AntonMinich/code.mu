@@ -188,3 +188,136 @@ function calculateExpression(num1, num2) {
     return square(num1) + square(num2);
 }
 console.log(calculateExpression(9,3));
+
+// Сделайте функцию func1, которая будучи вызвана вот так: func1()(), вернет число 1. 
+// Сделайте аналогичную функцию func2, возвращающую число 2. Найдите сумму результатов этих функций.
+
+function func1() {
+    return function() {
+        return 1;
+    }
+}
+console.log(func1()())
+
+function func2() {
+    return function() {
+        return 2;
+    }
+}
+console.log(func2()());
+console.log(func1()() + func2() ());
+
+// Сделайте функцию func, которая будучи вызвана вот так: func()()()()(), вернет '!'.
+function func() {
+    return function() {
+        return function() {
+            return function() {
+                return function() {
+                    return '!';
+                }
+            }
+        }
+    }
+}
+console.log(func()()()()());
+
+// Сделайте функцию func, которая будучи вызвана вот так: func(2)(3)(4), вернет сумму переданных в параметры чисел.
+function func(num1) {
+    return function(num2) {
+        return function(num3) {
+            return num1 + num2 + num3;
+        }
+    }
+}
+console.log(func(1)(2)(3));
+
+// Сделайте функцию func, которая будучи вызвана вот так: func(2)(3)(4)(5)(), вернет массив переданных в параметры чисел.
+
+function func(num1) {
+    arr = [];
+    arr.push(num1);
+    return function(num2) {
+        arr.push(num2);
+        return function(num3) {
+            arr.push(num3);
+            return function(num4) {
+                arr.push(num4);
+                return function() {
+                    return arr;
+                }
+            }
+        }
+    }
+}
+console.log(func(2)(3)(4)(5)());
+
+// Дан массив с числами. С помощью созданной нами функции each увеличьте каждый элемент в два раза.
+
+function each(arr, callback) {
+	let result = [];
+	
+	for (let elem of arr) {
+		result.push( callback(elem) ); // вызываем функцию-коллбэк
+	}
+	
+	return result;
+}
+
+arr = [1,2,3,4,5];
+result = each(arr,function(num) {
+    return num * 2;
+})
+console.log(result);
+
+
+// Дан массив со строками. С помощью созданной нами функции each переверните символы каждой строки в обратном порядке.
+function each(arr, callback) {
+    let result = [];
+    for (let i = 0; i < arr.length; i ++) {
+        result.push(callback(arr[i]));
+    }
+    return result;
+}
+arr = ['123', '456', '789'];
+result = each(arr, function (str){
+    return str.split('').reverse().join('');
+});
+console.log(result);
+
+
+// Дан массив со строками. С помощью созданной нами функции each сделайте заглавным первый символ каждой строки.
+
+function each(arr,callback) {
+
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        result.push(callback(arr[i]));
+    }
+    return result;
+}
+
+arr = ['hello', 'world'];
+result = each(arr, function(str){
+    return str[0].toUpperCase() + str.slice(1);
+});
+console.log(result);
+
+
+// возведите все элементы массива в куб:
+
+function each(arr,callback) {
+
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        result.push(callback(arr[i]));
+    }
+    return result;
+}
+
+function cube(num) {
+	return num ** 3;
+}
+arr = [1,2,3,4];
+result = each(arr, cube);
+console.log(result);
+
