@@ -321,3 +321,183 @@ arr = [1,2,3,4];
 result = each(arr, cube);
 console.log(result);
 
+// реализуйте счетчик вызова функции, работающий на замыканиях.
+
+function test() {
+    let num = 1;
+    return function() {
+        console.log(num);
+        num++;
+    }
+}
+let func1 = test();
+func1();
+func1();
+
+
+// Пусть функция в замыкании хранит число 10. Сделайте так, чтобы каждый вызов функции уменьшал это число на 1 и выводил в консоль уменьшенное число.
+function test() {
+   let num = 10;
+    return function() {
+        num--;
+        console.log(num);
+    }
+}
+func1 = test();
+
+func1();
+func1();
+func1();
+
+
+// Модифицируйте предыдущую задачу так, чтобы отсчет доходил до 0, а затем каждый последующий вызов функции выводил в консоль сообщение о том,
+//  что отсчет окончен.
+
+function timer() {
+    let num = 4;
+    return function() {
+        num -=2;
+        if(num <= 0) {
+            console.log('Отсчет окончен');
+        } else {
+            console.log(num);
+        }
+        
+    }
+}
+
+func1 = timer();
+func1();
+func1();
+func1();
+
+
+// Допишите следующий код так, чтобы его запуск алертом выводил '!':
+
+(function() {
+	return function() {
+        return function(){
+            console.log('!!!');
+        }
+    }
+})()()();
+
+// Допишите  код так, чтобы его запуск выводил сумму переданных параметрами чисел:
+(function(num1) {
+        return function(num2) {
+            console.log( num1 + num2);
+        }
+    
+})(1)(2);
+
+
+// Допишите следующий код так, чтобы его запуск выводил сумму переданных параметрами чисел:
+(function(num1) {
+	return function(num2) {
+        return function(num3) {
+            console.log(num1 + num2 + num3);
+        }
+    }
+})(1)(2)(3);
+
+// С помощью рекурсии выведите элементы этого массива в консоль.
+arr = [1, 2, 3, 4, 5];
+function func(arr) {
+    console.log(arr.shift());
+    if (arr.length != 0){
+        func(arr);
+    }
+}
+func(arr);
+
+// С помощью рекурсии найдите сумму квадратов элементов этого массива.
+
+
+function getSum(arr) {
+	let sum = arr.shift();
+	
+	if (arr.length !== 0) {
+		sum += getSum(arr);
+	}
+	
+	return sum;
+}
+
+console.log(getSum([1, 2, 3]));
+
+// С помощью рекурсии выведите все примитивные элементы этого объекта в консоль.
+function func(obj) {
+    for(let key in obj) {
+        if (typeof obj[key] == 'object') {
+            func(obj[key]);
+        } else {
+            console.log(obj[key]);
+        }
+    }
+}
+func({a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}});
+
+// Напишите код, который развернет наш многомерный массив в одномерный. Для приведенного выше массива это будет выглядеть вот так:
+
+function func(arr) {
+    let resultArr = [];
+    for (let elem of arr) {
+        if (Array.isArray(elem)) {
+            resultArr = resultArr.concat(func(elem));
+        }
+        else {
+                resultArr.push(elem);
+        }
+    }
+    return resultArr;
+}
+
+res = func([1, [2, 7, 8], [3, 4, [5, [6, 7]]]]);
+console.log(res);
+
+
+// С помощью рекурсии найдите сумму элементов этого объекта.
+
+function func(obj) {
+    let sum = 0;
+    for (let key in obj) {
+        if (typeof obj[key] === 'object') {
+            sum += func(obj[key]);
+        } else {
+            sum += obj[key];
+        }
+    }
+    return sum;
+}
+
+result = func({a: 1, b: {c: 2, d: 3, e: 4}, f: {g: 5, j: 6, k: {l: 7, m: {n: 8, o: 9}}}});
+console.log(result);
+
+
+// С помощью рекурсии слейте элементы этого массива в одну строку:
+function func(arr) {
+    let newArr = [];
+    for (let elem of arr) {
+        if (Array.isArray(elem)) {
+            newArr = newArr.concat(func(elem));
+        } else {
+            newArr.push(elem);
+        }
+    }
+    return newArr.join('');
+}
+result = func(['a', ['b', 'c', 'd'], ['e', 'f', ['g', ['j', 'k']]]]);
+console.log(result);
+
+// Возведите все элементы-числа этого массива в квадрат.
+function func(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if (Array.isArray(arr[i])) {
+            arr[i] = func(arr[i]);
+        } else {
+            arr[i] = arr[i] ** 2;
+        }
+    }
+    return arr;
+}
+console.log(func([1, [2, 7, 8], [3, 4], [5, [6, 7]]]));
