@@ -151,5 +151,130 @@ for (let i = 0; i < arr.length; i++) {
             sum += arr[i][j][k];
         }
     }
-}
+} 
 console.log(sum);
+
+
+// Дан массив со словами. Удалите из него слова, состоящие более чем из трех символов.
+arr = ['Hello', 'Hi', 'Good morning'];
+
+res = arr.filter(function(elem) {
+    return elem.length < 3;
+})
+console.log(res);
+
+res = arr.filter(elem => elem.length < 3);
+console.log(res);
+
+// Проверьте, что все цифры этого числа являются нечетными.
+num = 1357;
+arr = String(num).split('');
+res = arr.filter(function(elem){
+    if (elem % 2 !=0) {
+        return true;
+    } else {
+        return false;
+    }
+})
+console.log(res);
+
+// Проверьте, что это слово читается одинаково с любой стороны.
+str = 'abcba';
+arr = str.split('');
+let reverseArr = [...arr].reverse();
+res = arr.every((elem,index) => reverseArr[index] == elem);
+console.log(reverseArr);
+
+// Найдите сумму элементов этого массива.
+ arr = [
+    [
+      [11, 12, 13],
+      [14, 15, 16],
+      [17, 17, 19],
+    ],
+    [
+      [21, 22, 23],
+      [24, 25, 26],
+      [27, 27, 29],
+    ],
+    [
+      [31, 32, 33],
+      [34, 35, 36],
+      [37, 37, 39],
+    ],
+  ];
+   sum = 0;
+   arr.forEach(elem => elem.forEach(subElem => subElem.forEach(tesl => sum +=tesl)));
+   console.log(sum);
+//   arr.forEach(function(elem) {
+//      elem.forEach(function(subElem) {
+//          subElem.forEach(function(tres){
+//             sum += tres;
+//         })
+//     })
+//   });
+//   console.log(sum);
+  
+
+// Выведите в консоль все числа в промежутке от 10 до 1000, у которых первая цифра четная.
+const start = 10;
+const end = 1000;
+arr = [...Array(end - start + 1).keys()].map(index => start + index);
+arr.forEach(function(elem){
+    if(String(elem)[0] % 2 == 0) {
+        console.log(elem);
+    }
+})
+
+// const start = 10;
+// const end = 1000;
+// arr = [...Array(end - start + 1).keys()].map(index => start + index);
+// res = arr.filter(elem => String(elem)[0] % 2 === 0)
+// console.log(res);
+
+// Дан некоторый массив, например, вот такой: [1, 2, 3, 4, 5, 6] Поменяйте местами пары элементов этого массива: [2, 1, 4, 3, 6, 5]
+arr = [1, 2, 3, 4, 5, 6];
+res = [];
+for (let i = 0; i < arr.length; i++) {
+    res.push(String(arr[i+1] + String(arr[0])));
+    arr.splice(0,2);
+    i--;
+}
+console.log(res.join('').split('').map(Number));
+
+// 
+
+arr = [1, 2, 3, 4, 5, 6];
+res = [];
+
+for (let i = 0; i < arr.length; i += 2) {
+    if (i + 1 < arr.length) {
+        res.push(arr[i + 1], arr[i]);
+    } else {
+        res.push(arr[i]);
+    }
+}
+
+console.log(res);
+
+// 
+
+arr = [1, 2, 3, 4, 5, 6];
+res = arr.map(function(elem,index,array){
+    if(index % 2 == 0) {
+        return [array[index+1], elem];
+    }
+   
+})
+console.log(res.filter(Boolean).flat());
+
+
+
+
+
+
+
+
+
+
+
