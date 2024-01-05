@@ -270,11 +270,114 @@ console.log(res.filter(Boolean).flat());
 
 
 
+// Найдите сумму элементов этого объекта.
+obj = {
+	1: {
+		1: 11,
+		2: 12,
+		3: 13,
+	},
+	2: {
+		1: 21,
+		2: 22,
+		3: 23,
+	},
+	3: {
+		1: 24,
+		2: 25,
+		3: 26,
+	},
+}
+sum = 0;
+for (let key in obj) {
+    for (let subKey in obj[key]){
+        sum += obj[key][subKey];
+    }
+}
+console.log(sum);
+
+// 
+
+obj = {
+	1: {
+		1: 11,
+		2: 12,
+		3: 13,
+	},
+	2: {
+		1: 21,
+		2: 22,
+		3: 23,
+	},
+	3: {
+		1: 24,
+		2: 25,
+		3: 26,
+	},
+}
+sum = 0;
+Object.keys(obj).forEach(function(elem){
+    Object.keys(obj[elem]).forEach(function(subElem){
+        sum += obj[elem][subElem];
+    })
+})
+console.log(sum)
 
 
+// Поиск минимального значения в объекте
+let numbersObject = {
+    a: 15,
+    b: 8,
+    c: 21,
+    d: 12,
+  };
+
+  let min = Infinity;
+
+  for(let key in numbersObject) {
+    if (min > numbersObject[key]) {
+        min = numbersObject[key];
+    }
+  }
+  console.log(min);
+
+//   
+
+ numbersObject = {
+    a: 15,
+    b: 8,
+    c: 21,
+    d: 12,
+  };
+
+   min = Infinity;
+
+  Object.keys(numbersObject).forEach(function(elem){
+        if (min > numbersObject[elem]) {
+            min = numbersObject[elem];
+        }
+    })
+    console.log(min);
+
+    
+//  Подсчет количества ключей с четными значениями
+let valuesObject = {
+    a: 3,
+    b: 8,
+    c: 5,
+    d: 12,
+    e: 6,
+  };
+
+  counter = 0;
+  Object.keys(valuesObject).forEach(function(elem) {
+    if (valuesObject[elem] % 2 == 0) {
+        counter ++;
+    }
+  })
+  console.log(counter);
 
 
-
-
+  
 
 
