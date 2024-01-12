@@ -146,4 +146,6 @@ console.log(res);
 
 // Проверить, все ли строки массива имеют длину строки более 10 символов.
 words = ['apple', 'banana', 'kiwi', 'orange'];
+res = words.every(elem => elem.length > 10);
+console.log(res);
 
