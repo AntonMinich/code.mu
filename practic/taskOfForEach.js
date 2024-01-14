@@ -135,9 +135,13 @@ words.forEach(function(elem){
 
 // Найти и вывести в консоль самое длинное слово из массива с использованием forEach.
 words = ['apple', 'orange', 'banana', 'kiwi'];
+let bigWord = '';
 res = words.forEach(function(elem){
-
+    if (elem.length > bigWord.length) {
+        bigWord = elem;
+    }
 })
+console.log(bigWord);
 
 
 
@@ -153,6 +157,13 @@ words.forEach(function(elem){
 
 // Создать объект, используя пары ключ-значение из массива с использованием forEach.
 let keyValuePairs = [['name', 'John'], ['age', 25], ['city', 'New York']];
+let obj = {};
+keyValuePairs.forEach(function(elem) {
+    let [key, value] = elem;
+    obj[key] = value;
+})
+console.log(obj);
+
 
 
 
@@ -160,49 +171,76 @@ let keyValuePairs = [['name', 'John'], ['age', 25], ['city', 'New York']];
 // Условие: Создайте массив чисел и используйте метод forEach для вывода в консоль только четных элементов.
 
 const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numbers1.forEach(elem => elem % 2 == 0 ? console.log(elem) : false);
 
 // Задача 2: Удвоение каждого элемента массива
 // Условие: Создайте массив чисел и используйте метод forEach для удвоения каждого элемента в массиве.
 
 const numbers2 = [3, 7, 11, 5, 8, 14, 2, 6];
+numbers2.forEach(elem => console.log(elem *2));
 
 // Задача 3: Вывод строк, начинающихся с гласной буквы
 // Условие: Создайте массив строк и используйте метод forEach для вывода в консоль строк, начинающихся с гласной буквы.
 
 const words3 = ["apple", "banana", "cherry", "date", "grape"];
+let letter = ['a', 'e', 'i', 'o', 'u', 'y'];
+words3.forEach(function(elem){
+    if (letter.includes(elem[0])) {
+        console.log(elem);
+    }
+})
 
 // Задача 4: Вычисление среднего значения массива чисел
 // Условие: Создайте массив чисел и используйте метод forEach для вычисления среднего значения элементов массива.
 
 const numbers4 = [10, 20, 5, 15, 25];
+sum = 0;
+numbers4.forEach(elem => sum += elem);
+res = sum / numbers4.length;
+console.log(res);
 
 // Задача 5: Замена отрицательных чисел на их абсолютные значения
 // Условие: Создайте массив чисел и используйте метод forEach для замены отрицательных чисел на их абсолютные значения.
 
 const numbers5 = [-5, 3, -1, 7, -2, 10, -8, 6];
+let resArr = [];
+numbers5.forEach(elem => resArr.push(Math.abs(elem)));
+console.log(resArr);
 
 // Задача 6: Вывод строк с длиной более 4 символов
 // Условие: Создайте массив строк и используйте метод forEach для вывода в консоль только тех строк, длина которых более 4 символов.
 
 const words6 = ["apple", "banana", "cherry", "date", "grape"];
+words6.forEach(elem => elem.length > 4 ? console.log(elem) : false);
+
 
 // Задача 7: Подсчет количества четных чисел в массиве
 // Условие: Создайте массив чисел и используйте метод forEach для подсчета количества четных чисел в массиве.
 
 const numbers7 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let count = 0;
+numbers7.forEach(elem => elem % 2 == 0 ? count++ : false);
+console.log(count);
 
 // Задача 8: Конкатенация строк в массиве
 // Условие: Создайте массив строк и используйте метод forEach для конкатенации всех строк в одну строку.
 
 const words8 = ["apple", "banana", "cherry", "date", "grape"];
+let wordRes = '';
+words8.forEach(elem => wordRes += elem);
+console.log(wordRes);
 
 // Задача 9: Перевод всех элементов массива в верхний регистр
 // Условие: Создайте массив строк и используйте метод forEach для перевода всех элементов массива в верхний регистр.
 
 const words9 = ["apple", "banana", "cherry", "date", "grape"];
+resArr = [];
+words9.forEach(elem => resArr.push(elem.toUpperCase()));
+console.log(resArr);
 
 // Задача 10: Вывод элементов массива в обратном порядке
 // Условие: Создайте массив и используйте метод forEach для вывода элементов массива в обратном порядке.
 
 const array10 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+array10.reverse().forEach(elem => console.log(elem));
 
