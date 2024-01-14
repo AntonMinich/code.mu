@@ -1,155 +1,79 @@
 // Найти сумму всех чисел в массиве.
 let numbers = [1, 2, 3, 4, 5];
+let res = numbers.reduce((sum, elem) => sum + elem, 0);
+console.log(res);
 
 
 // Найти произведение всех чисел в массиве.
 numbers = [2, 3, 4, 5];
+res = numbers.reduce((sum, elem) => sum * elem, 1);
+console.log(res);
 
 
 
 // Объединить все строки в массиве в одну строку.
 words = ['Hello', ' ', 'world', '!'];
-
-
-// Объединить все строки в массиве в одну строку.
-words = ['Hello', ' ', 'world', '!'];
-
+res = words.reduce((sum, elem) => sum + elem, '');
+console.log(res);
 
 
 // Найти минимальное число в массиве.
 numbers = [8, 2, 5, 10, 3];
+res = numbers.reduce((min, elem) => min > elem ? elem : min, +Infinity);
+console.log(res);
 
 
 
 // Объединить массив объектов в один объект.
 let people = [{ name: 'John', age: 25 }, { name: 'Alice', age: 30 }, { name: 'Bob', age: 22 }];
+res = people.reduce(function (sum, elem) {
+    sum[elem.name] = elem.age;
+    return sum;
+}, {});
+console.log(res);
+
+
+
 
 
 
 // Посчитать количество четных чисел в массиве.
 numbers = [2, 5, 8, 11, 14];
-
-
+let counter = numbers.reduce((count, elem) => elem % 2 == 0 ? count + 1 : count, 0);
+console.log(counter);
 
 
 // Объединить все строки в массиве в одну строку с разделителем ', '.
 words = ['apple', 'kiwi', 'banana', 'orange'];
+res = words.reduce((sum, elem) => sum += ', ' + elem);
+console.log(res);
 
 
 
 
 // Найти среднее значение чисел в массиве.
 numbers = [10, 15, 20, 25];
+res = numbers.reduce((sum, elem) => (sum += elem), 0) / numbers.length;
+console.log(res);
 
 
 
 
 // Посчитать общее количество букв 'a' в строках массива.
 words = ['apple', 'kiwi', 'banana', 'orange'];
+res = words.reduce((sum, elem) => sum +(elem.split('a').length - 1), 0);
+console.log(res);
 
-
+let a = 'banana';
+console.log(a.split('a').length-1);
 
 
 // Найти сумму всех положительных чисел в массиве.
 numbers = [-3, 5, -8, 10, 15];
+res = numbers.reduce((sum, elem) => elem > 0 ? sum += elem : elem);
+console.log(res);
 
 
-
-
-// Объединить объекты массива, у которых общее свойство 'category'.
-let products = [{ name: 'Apple', category: 'Fruit' }, { name: 'Carrot', category: 'Vegetable' }, { name: 'Orange', category: 'Fruit' }];
-
-
-
-
-// Посчитать количество уникальных элементов в массиве.
-numbers = [2, 3, 2, 5, 8, 5];
-
-
-
-// Объединить все строки в массиве, добавив к каждой префикс 'Prefix: '.
-words = ['apple', 'kiwi', 'banana', 'orange'];
-
-
-
-// Посчитать сумму значений свойства 'quantity' в массиве объектов.
-products = [{ name: 'Apple', quantity: 3 }, { name: 'Banana', quantity: 5 }, { name: 'Orange', quantity: 2 }];
-
-
-
-
-// Найти сумму длин всех строк в массиве.
-words = ['apple', 'kiwi', 'banana', 'orange'];
-
-
-
-// Объединить все строки в массиве в одну строку в обратном порядке.
-words = ['apple', 'kiwi', 'banana', 'orange'];
-
-
-
-// Найти сумму значений свойства 'price' для объектов, у которых 'category' равно 'Fruit'.
-products = [{ name: 'Apple', category: 'Fruit', price: 2 }, { name: 'Carrot', category: 'Vegetable', price: 1 }, { name: 'Orange', category: 'Fruit', price: 3 }];
-
-
-// Объединить все строки в массиве, добавив к каждой префикс 'Start: ' и суффикс ' :End'.
-words = ['apple', 'kiwi', 'banana', 'orange'];
-
-
-
-// Найти сумму квадратов всех чисел в массиве.
-numbers = [2, 3, 4, 5];
-
-
-// Задача 1: Сумма всех элементов массива чисел
-// Условие: Создайте массив чисел и используйте метод reduce для вычисления суммы всех элементов.
-
-const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// Задача 2: Произведение всех элементов массива чисел
-// Условие: Создайте массив чисел и используйте метод reduce для вычисления произведения всех элементов.
-
-const numbers2 = [3, 7, 2, 5, 4];
-
-// Задача 3: Объединение строк массива в одну строку
-// Условие: Создайте массив строк и используйте метод reduce для объединения всех строк в одну строку.
-
-const words3 = ["apple", "banana", "cherry", "date", "grape"];
-
-// Задача 4: Вычисление среднего значения массива чисел
-// Условие: Создайте массив чисел и используйте метод reduce для вычисления среднего значения элементов массива.
-
-const numbers4 = [10, 20, 5, 15, 25];
-
-// Задача 5: Конкатенация строк с длиной более 4 символов
-// Условие: Создайте массив строк и используйте метод reduce для конкатенации всех строк, длина которых более 4 символов.
-
-const words5 = ["apple", "banana", "cherry", "date", "grape"];
-
-// Задача 6: Поиск максимального значения в массиве чисел
-// Условие: Создайте массив чисел и используйте метод reduce для поиска максимального значения в массиве.
-
-const numbers6 = [8, 15, 2, 11, 7];
-
-// Задача 7: Склейка массива строк с разделителем
-// Условие: Создайте массив строк и используйте метод reduce для склейки всех строк с разделителем ', '.
-
-const words7 = ["apple", "banana", "cherry", "date", "grape"];
-
-// Задача 8: Подсчет количества четных чисел в массиве
-// Условие: Создайте массив чисел и используйте метод reduce для подсчета количества четных чисел в массиве.
-
-const numbers8 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-// Задача 9: Вычисление произведения длин строк массива
-// Условие: Создайте массив строк и используйте метод reduce для вычисления произведения длин всех строк в массиве.
-
-const words9 = ["apple", "banana", "cherry", "date", "grape"];
-
-// Задача 10: Поиск первой строки с длиной более 5 символов
-// Условие: Создайте массив строк и используйте метод reduce для поиска первой строки с длиной более 5 символов.
-
-const words10 = ["apple", "banana", "cherry", "date", "grape"];
 
 
 
