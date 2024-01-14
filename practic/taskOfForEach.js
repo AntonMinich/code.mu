@@ -1,99 +1,159 @@
 
 // Вывести каждый элемент массива в консоль с использованием forEach.
 let numbers = [1, 2, 3, 4, 5];
+numbers.forEach(elem => console.log(elem));
+
 
 
 // Умножить каждый элемент массива на 2 с использованием forEach.
 numbers = [1, 2, 3, 4, 5];
+numbers.forEach(elem => console.log(elem * 2));
 
 
 
 // Вывести в консоль только четные числа из массива с использованием forEach.
 numbers = [1, 2, 3, 4, 5];
+numbers.forEach(function(elem){
+    if(elem % 2 == 0) {
+        console.log(elem);
+    }
+});
 
 
 
 // Посчитать и вывести в консоль сумму всех элементов массива с использованием forEach.
 numbers = [1, 2, 3, 4, 5];
+let sum = 0;
+numbers.forEach(elem => sum += elem);
+console.log(sum);
 
 
 
 // Создать строку, объединив все элементы массива в одну строку с использованием forEach.
 numbers = [1, 2, 3, 4, 5];
+let string = '';
+numbers.forEach(elem => string += String(elem));
+console.log(string);
 
 
 // Увеличить каждый элемент массива на 10% с использованием forEach.
 prices = [10, 20, 30, 40, 50];
+prices.forEach(elem => console.log(elem + elem * 0.1));
 
 
 // Найти и вывести в консоль минимальное значение из массива с использованием forEach.
 numbers = [5, 3, 8, 1, 7];
+let min = +Infinity;
+numbers.forEach(function(elem){
+    if (elem < min) {
+        min = elem;
+    }
+});
+console.log(min);
+
 
 
 // Объединить все строки массива в одну строку и вывести в консоль с использованием forEach.
 let words = ['Hello', ' ', 'world', '!'];
+string = '';
+words.forEach(elem => string += elem);
+console.log(string);
 
 
 
 // Удалить все отрицательные числа из массива с использованием forEach.
 numbers = [2, -5, 10, -3, 8];
-
-
-
-// Вывести в консоль все простые числа из массива с использованием forEach.
-numbers = [2, 3, 4, 5, 6];
-
+numbers.forEach(function(elem){
+    if (elem > 0) {
+        console.log(elem)
+    }
+});
 
 
 // Удвоить все положительные числа в массиве с использованием forEach.
 numbers = [-1, 2, -3, 4, -5];
+numbers.forEach(function(elem) {
+    if (elem > 0) {
+        console.log(elem);
+    }
+});
 
 
 
 // Создать одну строку, объединив все элементы массива с использованием forEach.
 words = ['I', ' love', ' JavaScript'];
+string = '';
+words.forEach(elem => string += elem);
+console.log(string);
 
 
 
 // Найти и вывести в консоль среднее значение из массива с использованием forEach.
 numbers = [10, 15, 20, 25, 30];
+sum = 0;
+numbers.forEach(function(elem) {
+    sum += elem;
+})
+let res = sum / numbers.length;
+console.log(res);
 
 
 
 // Вывести в консоль все строки в обратном порядке с использованием forEach.
 words = ['apple', 'orange', 'banana'];
+words.forEach(function(elem, index, array){
+    console.log(array[array.length-1 - index]);
+})
 
 
 
 // Удалить все дубликаты из массива с использованием forEach.
 numbers = [1, 2, 2, 3, 4, 4, 5];
+numbers.forEach(function(elem, index, array){
+    if (array.indexOf(elem) == index) {
+        console.log(elem);
+    }
+}) 
 
 
 
 // Отсортировать числа в массиве по убыванию с использованием forEach.
 numbers = [8, 3, 5, 1, 7];
+console.log(numbers.sort((a,b) => a - b));
+
 
 
 
 // Преобразовать все строки массива в верхний регистр с использованием forEach.
 words = ['apple', 'orange', 'banana'];
+words.forEach(function(elem){
+    console.log(elem[0].toUpperCase() + elem.slice(1));
+})
 
 
 
 
 // Найти и вывести в консоль самое длинное слово из массива с использованием forEach.
 words = ['apple', 'orange', 'banana', 'kiwi'];
+res = words.forEach(function(elem){
+
+})
 
 
 
 
 // Вывести в консоль все строки с обратным порядком символов с использованием forEach.
 words = ['hello', 'world', 'javascript'];
+words.forEach(function(elem){
+    console.log(elem.split('').reverse().join(''))
+});
+
 
 
 
 // Создать объект, используя пары ключ-значение из массива с использованием forEach.
 let keyValuePairs = [['name', 'John'], ['age', 25], ['city', 'New York']];
+
 
 
 // Задача 1: Вывод четных элементов массива
