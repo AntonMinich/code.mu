@@ -93,32 +93,65 @@ console.log(res);
 
 // Задача 1: Умножение элементов массива на их индекс
 let array1 = [2, 4, 6, 8, 10];
+let res1 = array1.map((elem, index) => elem * index);
+console.log(res1);
 
 // Задача 2: Квадраты четных элементов массива
 let array2 = [1, 2, 3, 4, 5];
+let res2 = array2.map(function(elem) {
+    if (elem % 2 == 0){
+        return Math.pow(elem, 2);
+    } else {
+        return elem;
+    }
+})
+console.log(res2);
 
 // Задача 3: Конкатенация элементов массива с их индексом
 let array3 = ['apple', 'banana', 'kiwi'];
+let res3 = array3.map((elem, index) => elem + index);
+console.log(res3);
 
 // Задача 4: Формирование строк в формате 'Элемент на позиции index'
 let array4 = ['one', 'two', 'three'];
+let res4 = array4.map((elem, index) => elem + ' на позиции ' + index);
+console.log(res4);
 
 // Задача 5: Удвоение элементов массива, если их значение меньше индекса
-let array5 = [0, 2, 4, 6, 8];
+let array5 = [0, 2, 4, 1, 2];
+let res5 = array5.map((elem, index) => elem < index ? elem * 2 : elem);
+console.log(res5);
+
 
 // Задача 6: Преобразование чисел в массиве в строки с добавлением индекса
 let array6 = [10, 20, 30, 40, 50];
+let res6 = array6.map((elem , index) => elem + String(index));
+console.log(res6);
 
 // Задача 7: Объединение строк в массиве с их индексом
 let array7 = ['red', 'green', 'blue'];
+let res7 = array7.map((elem, index) => elem + String(index));
+console.log(res7);
 
 // Задача 8: Определение четности индекса и умножение элементов массива
 let array8 = [3, 7, 2, 9, 5];
+let res8 = array8.map(function(elem, index){
+    if (index % 2 == 0) {
+        return elem * index;
+    } else {
+        return elem;
+    }
+})
+console.log(res8);
 
 // Задача 9: Сложение индекса и значения элемента массива
 let array9 = [1, 2, 3, 4, 5];
+let res9 = array9.map((elem, index) => elem * index);
+console.log(res9);
 
 // Задача 10: Требуется отфильтровать элементы массива, оставив только те, у которых индекс является четным числом.
 let array10 = ['apple', 'orange', 'kiwi', 'banana'];
+let res10 = array10.map((elem, index) => index % 2 == 0 ? elem : 'не четный индекс');
+console.log(res10);
 
 
