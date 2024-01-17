@@ -5,9 +5,9 @@ console.log(one, two, three);
 
 
 // Извлечь значения из объекта с использованием деструктуризации.
-let person = { name: 'John', age: 25 };
-let {name, age} = person;
-console.log(name, age);
+// let person = { name: 'John', age: 25 };
+// let {name, age} = person;
+// console.log(name, age);
 
 
 
@@ -30,18 +30,18 @@ function printInfo({ name, age }) {
 
 
   // Извлечь первый элемент из массива, а остальные поместить в новый массив.
-array = [1, 2, 3, 4, 5];
-let [a, ...rest] = array;
-console.log(a);
-console.log(rest);
+// array = [1, 2, 3, 4, 5];
+// let [a, ...rest] = array;
+// console.log(a);
+// console.log(rest);
 
 
 
 // Извлечь одно свойство из объекта, а остальные поместить в новый объект.
-person = { name: 'Bob', age: 28, city: 'London' };
-let {name, ...obj} = person;
-console.log(name);
-console.log(obj);
+// person = { name: 'Bob', age: 28, city: 'London' };
+// let {name, ...obj} = person;
+// console.log(name);
+// console.log(obj);
 
 
 
@@ -54,9 +54,9 @@ console.log(a, b, c);
 
 
 // Извлечь значения из объекта, присваивая переменным значения по умолчанию.
-person = { name: 'Charlie', age: 35, city: 'Paris' };
-let {name = 'Anton', age = 31, city = 'Minsk', country = 'Belarus'} = person;
-console.log(name, age, city, country);
+// person = { name: 'Charlie', age: 35, city: 'Paris' };
+// let {name = 'Anton', age = 31, city = 'Minsk', country = 'Belarus'} = person;
+// console.log(name, age, city, country);
 
 
 
@@ -97,17 +97,17 @@ console.log(first, second, third);
 
 
 // Извлечь значения из объекта с использованием деструктуризации и динамическими свойствами.
-let data = { key1: 'value1', key2: 'value2', key3: 'value3' };
-let { key1: first, key2: second, key3: third } = data;
-console.log(first, second, third);
+// let data = { key1: 'value1', key2: 'value2', key3: 'value3' };
+// let { key1: first, key2: second, key3: third } = data;
+// console.log(first, second, third);
 
 
 
 
 // Извлечь значения из массива с вложенными массивами, используя деструктуризацию.
-let nestedArray = [1, [2, 3], [4, 5, 6]];
-let [one, [two, three], [four, five, six]] = nestedArray;
-console.log(one, two, three, four, five, six);
+// let nestedArray = [1, [2, 3], [4, 5, 6]];
+// let [one, [two, three], [four, five, six]] = nestedArray;
+// console.log(one, two, three, four, five, six);
 
 
 
@@ -119,9 +119,9 @@ console.log(val1, val2, val3);
 
 
 // Извлечь значения из массива с использованием деструктуризации и условия.
-array = [1, 2, 3];
-let [one, two, three] = array;
-console.log(one, two, three);
+// array = [1, 2, 3];
+// let [one, two, three] = array;
+// console.log(one, two, three);
 
 
 
