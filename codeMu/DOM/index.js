@@ -37,16 +37,37 @@
 //     alert(3);
 // })
 
-let button4 = document.querySelector('#button4');
-let button5 = document.querySelector('#button5');
 
-button4.addEventListener('click', func1);
-function func1() {
-	alert(1);
+// ⊗jsPmDmNEH
+// let button4 = document.querySelector('#button4');
+// let button5 = document.querySelector('#button5');
+
+// button4.addEventListener('click', func1);
+// function func1() {
+// 	alert(1);
+// }
+
+// button5.addEventListener('click', func2);
+
+// function func2() {
+// 	alert(2);
+// }
+
+
+
+// ⊗jsPmDmMEH
+function func() {
+	alert('message');
 }
 
-button5.addEventListener('click', func2);
+let elem1 = document.querySelector('#elem1');
+let elem2 = document.querySelector('#elem2');
+let elem3 = document.querySelector('#elem3');
+let elem4 = document.querySelector('#elem4');
+let elem5 = document.querySelector('#elem5');
 
-function func2() {
-	alert(2);
-}
+elem1.addEventListener('click', func);
+elem2.addEventListener('click', func);
+elem3.addEventListener('click', func);
+elem4.addEventListener('click', func);
+elem5.addEventListener('click', func);
