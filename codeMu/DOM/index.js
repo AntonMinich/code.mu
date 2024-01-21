@@ -299,7 +299,32 @@
 
 
 
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('focus', function(){
+// 	elem.value = '';
+// })
+
+
+// ⊗jsPmDmEA
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	alert(elem.className);
+// })
+
+
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	elem.className = 'newClass';
+// 	alert(elem.className);
+// })
+
+
 let elem = document.querySelector('#elem');
-elem.addEventListener('focus', function(){
-	elem.value = '';
+let button = document.querySelector('#button');
+button.addEventListener('click', function(){
+	let array = [];
+	array.push(elem.className);
+	alert(array.join(' ').split(' '));
 })
