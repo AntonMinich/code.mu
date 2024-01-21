@@ -334,7 +334,24 @@
 
 
 // ⊗jsPmDmChA
-let image = document.querySelector('#image');
-console.log(image.width);
-console.log(image.height);
-console.log(image.src)
+// let image = document.querySelector('#image');
+// console.log(image.width);
+// console.log(image.height);
+// console.log(image.src)
+
+
+// ⊗jsPmDmThs
+let elem = document.querySelector('#elem');
+elem.addEventListener('focus', function(){
+	this.value = 1;
+})
+
+elem.addEventListener('blur', function(){
+	this.value = 2;
+})
+
+
+let button = document.querySelector('#button');
+button.addEventListener('click', function(){
+	this.textContent = Number(this.textContent) + 1;
+})
