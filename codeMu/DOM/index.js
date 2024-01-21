@@ -173,3 +173,60 @@
 // button1.addEventListener('click', function(){
 // 	elem1.innerHTML = '<b>'+ elem1.textContent + '</b>';
 // })
+
+// ⊗jsPmDmAVP
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	alert(elem.type);
+// })
+
+// let button2 = document.querySelector('#button2');
+// button2.addEventListener('click', function(){
+// 	elem.type = 'submit';
+// })
+
+// let elem = document.querySelector('#elem');
+// let link = document.querySelector('#link');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	elem.textContent = link.href;
+// })
+
+
+// let link = document.querySelector('#link');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	link.textContent = link.textContent + ' (' + link.href + ')'
+// })
+
+
+// let img = document.querySelector('#img');
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	elem.textContent = img.src;
+// })
+
+// let img = document.querySelector('#img');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	img.width = 300;
+// })
+
+// let img = document.querySelector('#img');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	img.width *= 2;
+// })
+
+// let img1 = document.querySelector('#img1');
+// let img2 = document.querySelector('#img2');
+// let button1 = document.querySelector('#button1');
+// let button2 = document.querySelector('#button2');
+// button1.addEventListener('click', function(){
+// 	img1.src = './images/gomer.jpg';
+// })
+// button2.addEventListener('click', function(){
+// 	img2.src = './images/gomer2.png'
+// })
