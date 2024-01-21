@@ -230,3 +230,51 @@
 // button2.addEventListener('click', function(){
 // 	img2.src = './images/gomer2.png'
 // })
+
+// ⊗jsPmDmTF
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	let text = 'Новый текст';
+// 	elem.value = text;
+// })
+
+
+// let inputText = document.querySelector('#inputText');
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('button');
+// button.addEventListener('click', function(){
+// 	let inputValue = inputText.value;
+// 	elem.textContent = inputValue;
+// })\
+
+// let number = document.querySelector('#number');
+// let result = document.querySelector('#result');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	result.value = Math.pow(number.value, 2);
+// })
+
+
+// let in1 = document.querySelector('#in1');
+// let in2 = document.querySelector('#in2');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	let number1 = in1.value;
+// 	let number2 = in2.value;
+// 	in1.value = number2;
+// 	in2.value = number1;	
+// })
+
+
+// let in1 = document.querySelector('#in1');
+// let in2 = document.querySelector('#in2');
+// let in3 = document.querySelector('#in3');
+// let in4 = document.querySelector('#in4');
+// let in5 = document.querySelector('#in5');
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+
+// button.addEventListener('click', function(){
+// 	elem.textContent = elem.textContent + ((Number(in1.value) + Number(in2.value) + Number(in3.value) + Number(in4.value) + Number(in5.value)) / 5)
+// })
