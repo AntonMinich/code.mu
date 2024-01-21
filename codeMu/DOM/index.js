@@ -321,10 +321,13 @@
 // })
 
 
-let elem = document.querySelector('#elem');
-let button = document.querySelector('#button');
-button.addEventListener('click', function(){
-	let array = [];
-	array.push(elem.className);
-	alert(array.join(' ').split(' '));
-})
+// let elem = document.querySelector('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	let array = [];
+// 	array.push(elem.className);
+// 	alert(array.join(' ').split(' '));
+// })
+
+//  ⊗jsPmDmChn 
+console.log(document.querySelector('#image').src);
