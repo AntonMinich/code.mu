@@ -330,4 +330,11 @@
 // })
 
 //  ⊗jsPmDmChn 
-console.log(document.querySelector('#image').src);
+// console.log(document.querySelector('#image').src);
+
+
+// ⊗jsPmDmChA
+let image = document.querySelector('#image');
+console.log(image.width);
+console.log(image.height);
+console.log(image.src)
