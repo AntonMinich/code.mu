@@ -92,24 +92,69 @@
 
 
 // ⊗jsPmDmDEH
+// let button = document.querySelector('#button');
+// button.addEventListener('dblclick', func);
+// function func(){
+// 	alert('это был dblclick');
+// }
+
+// let button2 = document.querySelector('#button2');
+// button2.addEventListener('mouseover', func2);
+// function func2(){
+// 	alert('Спасибо, что навели');
+// }
+
+// let button3 = document.querySelector('#button3');
+// button3.addEventListener('mouseout', func3);
+// function func3(){
+// 	alert ('Не уходи');
+// }
+
+// let button4 = document.querySelector('#button4');
+// button4.addEventListener('mouseover', func2);
+// button4.addEventListener('mouseout', func3);
+
+// ⊗jsPmDmET
+let elem = document.querySelector('#elem');
 let button = document.querySelector('#button');
-button.addEventListener('dblclick', func);
-function func(){
-	alert('это был dblclick');
-}
+button.addEventListener('click', function(){
+	alert(elem.textContent);
+})
 
+
+let elem2 = document.querySelector('#elem2');
 let button2 = document.querySelector('#button2');
-button2.addEventListener('mouseover', func2);
-function func2(){
-	alert('Спасибо, что навели');
-}
+button2.addEventListener('click', function(){
+	elem2.textContent = 'Новый текст абзаца';
+})
 
+
+let elem3 = document.querySelector('#elem3');
+let elem4 = document.querySelector('#elem4');
 let button3 = document.querySelector('#button3');
-button3.addEventListener('mouseout', func3);
-function func3(){
-	alert ('Не уходи');
-}
+button3.addEventListener('click', function() {
+	alert(Number(elem3.textContent) + Number(elem4.textContent));
+})
 
+
+let elem5 = document.querySelector('#elem5');
+let elem6 = document.querySelector('#elem6');
+let elem7 = document.querySelector('#elem7');
+let result = document.querySelector('#result');
 let button4 = document.querySelector('#button4');
-button4.addEventListener('mouseover', func2);
-button4.addEventListener('mouseout', func3);
+button4.addEventListener('click', function() {
+	result.textContent = Number(elem5.textContent) + Number(elem6.textContent) + Number(elem7.textContent);
+})
+
+let elem8 = document.querySelector('#elem8');
+let button5 = document.querySelector('#button5');
+button5.addEventListener('click', function(){
+	elem8.textContent = Number(elem8.textContent) + 1;
+})
+
+
+let elem9 = document.querySelector('#elem9');
+let button6 = document.querySelector('#button6');
+button6.addEventListener('click', function(){
+	elem9.textContent = elem9.textContent + '!!!';
+})
