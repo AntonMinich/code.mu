@@ -278,3 +278,28 @@
 // button.addEventListener('click', function(){
 // 	elem.textContent = elem.textContent + ((Number(in1.value) + Number(in2.value) + Number(in3.value) + Number(in4.value) + Number(in5.value)) / 5)
 // })
+
+
+
+// ⊗jsPmDmTFF
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('focus', function(){
+// 	elem.value = 1;
+// })
+
+// elem.addEventListener('blur', function(){
+// 	elem.value = 2;
+// })
+
+
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('blur', function(){
+// 	elem.value = Math.sqrt(elem.value);
+// })
+
+
+
+let elem = document.querySelector('#elem');
+elem.addEventListener('focus', function(){
+	elem.value = '';
+})
