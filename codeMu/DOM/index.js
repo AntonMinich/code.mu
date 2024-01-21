@@ -56,18 +56,36 @@
 
 
 // ⊗jsPmDmMEH
-function func() {
-	alert('message');
+// function func() {
+// 	alert('message');
+// }
+
+// let elem1 = document.querySelector('#elem1');
+// let elem2 = document.querySelector('#elem2');
+// let elem3 = document.querySelector('#elem3');
+// let elem4 = document.querySelector('#elem4');
+// let elem5 = document.querySelector('#elem5');
+
+// elem1.addEventListener('click', func);
+// elem2.addEventListener('click', func);
+// elem3.addEventListener('click', func);
+// elem4.addEventListener('click', func);
+// elem5.addEventListener('click', func);
+
+
+// ⊗jsPmDmSH
+function func1() {
+	alert('1');
 }
 
-let elem1 = document.querySelector('#elem1');
-let elem2 = document.querySelector('#elem2');
-let elem3 = document.querySelector('#elem3');
-let elem4 = document.querySelector('#elem4');
-let elem5 = document.querySelector('#elem5');
+function func2() {
+	alert('2');
+}
 
-elem1.addEventListener('click', func);
-elem2.addEventListener('click', func);
-elem3.addEventListener('click', func);
-elem4.addEventListener('click', func);
-elem5.addEventListener('click', func);
+function func3() {
+	alert('3');
+}
+let elem6 = document.querySelector('#elem');
+elem6.addEventListener('click', func1);
+elem6.addEventListener('click', func2);
+elem6.addEventListener('click', func3);
