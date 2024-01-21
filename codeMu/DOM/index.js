@@ -74,18 +74,42 @@
 
 
 // ⊗jsPmDmSH
-function func1() {
-	alert('1');
+// function func1() {
+// 	alert('1');
+// }
+
+// function func2() {
+// 	alert('2');
+// }
+
+// function func3() {
+// 	alert('3');
+// }
+// let elem6 = document.querySelector('#elem');
+// elem6.addEventListener('click', func1);
+// elem6.addEventListener('click', func2);
+// elem6.addEventListener('click', func3);
+
+
+// ⊗jsPmDmDEH
+let button = document.querySelector('#button');
+button.addEventListener('dblclick', func);
+function func(){
+	alert('это был dblclick');
 }
 
-function func2() {
-	alert('2');
+let button2 = document.querySelector('#button2');
+button2.addEventListener('mouseover', func2);
+function func2(){
+	alert('Спасибо, что навели');
 }
 
-function func3() {
-	alert('3');
+let button3 = document.querySelector('#button3');
+button3.addEventListener('mouseout', func3);
+function func3(){
+	alert ('Не уходи');
 }
-let elem6 = document.querySelector('#elem');
-elem6.addEventListener('click', func1);
-elem6.addEventListener('click', func2);
-elem6.addEventListener('click', func3);
+
+let button4 = document.querySelector('#button4');
+button4.addEventListener('mouseover', func2);
+button4.addEventListener('mouseout', func3);
