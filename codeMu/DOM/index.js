@@ -358,28 +358,59 @@
 
 
 // ⊗jsPmDmThsA
-let elem1 = document.querySelector('#elem1');
-let elem2 = document.querySelector('#elem2');
-let elem3 = document.querySelector('#elem3');
-let elem4 = document.querySelector('#elem4');
-let elem5 = document.querySelector('#elem5');
-elem1.addEventListener('click', func);
-elem2.addEventListener('click', func);
-elem3.addEventListener('click', func);
-elem4.addEventListener('click', func);
-elem5.addEventListener('click', func);
+// let elem1 = document.querySelector('#elem1');
+// let elem2 = document.querySelector('#elem2');
+// let elem3 = document.querySelector('#elem3');
+// let elem4 = document.querySelector('#elem4');
+// let elem5 = document.querySelector('#elem5');
+// elem1.addEventListener('click', func);
+// elem2.addEventListener('click', func);
+// elem3.addEventListener('click', func);
+// elem4.addEventListener('click', func);
+// elem5.addEventListener('click', func);
 
-function func(){
-    this.textContent = this.textContent + '!!!';
-}
+// function func(){
+//     this.textContent = this.textContent + '!!!';
+// }
 
 
-let in1 = document.querySelector('#in1');
-let in2 = document.querySelector('#in2');
-let in3 = document.querySelector('#in3');
-in1.addEventListener('blur', func2);
-in2.addEventListener('blur', func2);
-in3.addEventListener('blur', func2);
-function func2(){
-    this.value = Math.pow(this.value, 2);
-}
+// let in1 = document.querySelector('#in1');
+// let in2 = document.querySelector('#in2');
+// let in3 = document.querySelector('#in3');
+// in1.addEventListener('blur', func2);
+// in2.addEventListener('blur', func2);
+// in3.addEventListener('blur', func2);
+// function func2(){
+//     this.value = Math.pow(this.value, 2);
+// }
+
+
+// ⊗jsPmDmEGG
+
+let elem = document.querySelectorAll('#elem');
+let button = document.querySelector('#button');
+button.addEventListener('click', function(){
+    for (let el of elem) {
+        el.textContent = 'text';
+    }
+})
+
+let elem1 = document.querySelectorAll('#elem1');
+let button1 = document.querySelector('#button1');
+button1.addEventListener('click', function(){
+    let count = 1;
+    for(let el of elem1) {
+        el.textContent = el.textContent + count;
+        count++;
+    }
+})
+
+
+let number1 = document.querySelector('#number1');
+let number2 = document.querySelector('#number2');
+let number3 = document.querySelector('#number3');
+let result = document.querySelector('#result');
+let sum = document.querySelector('#sum');
+sum.addEventListener('click', function(){
+    result.textContent = +number1.value + +number2.value + +number3.value;
+})
