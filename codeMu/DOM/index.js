@@ -420,19 +420,29 @@
 // ⊗jsPmDmLNH
 
 
-let input = document.querySelectorAll('input');
-for (let elem of input) {
-    elem.addEventListener('blur', func);
-}
-function func(){
-    this.value = Number(this.value) + 1;
-}
+// let input = document.querySelectorAll('input');
+// for (let elem of input) {
+//     elem.addEventListener('blur', func);
+// }
+// function func(){
+//     this.value = Number(this.value) + 1;
+// }
 
 
-let number = document.querySelectorAll('p');
-for(let elem of number) {
-    elem.addEventListener('click', func);
-}
-function func(){
-    this.textContent = Math.pow(this.textContent, 2); 
+// let number = document.querySelectorAll('p');
+// for(let elem of number) {
+//     elem.addEventListener('click', func);
+// }
+// function func(){
+//     this.textContent = Math.pow(this.textContent, 2); 
+// }
+
+
+// ⊗jsPmDmLAH
+
+let divs = document.querySelectorAll('div');
+for(let elem of divs) {
+    elem.addEventListener('click', function(){
+        this.textContent++;
+    })
 }
