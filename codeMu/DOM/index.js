@@ -341,17 +341,45 @@
 
 
 // ⊗jsPmDmThs
-let elem = document.querySelector('#elem');
-elem.addEventListener('focus', function(){
-	this.value = 1;
-})
+// let elem = document.querySelector('#elem');
+// elem.addEventListener('focus', function(){
+// 	this.value = 1;
+// })
 
-elem.addEventListener('blur', function(){
-	this.value = 2;
-})
+// elem.addEventListener('blur', function(){
+// 	this.value = 2;
+// })
 
 
-let button = document.querySelector('#button');
-button.addEventListener('click', function(){
-	this.textContent = Number(this.textContent) + 1;
-})
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+// 	this.textContent = Number(this.textContent) + 1;
+// })
+
+
+// ⊗jsPmDmThsA
+let elem1 = document.querySelector('#elem1');
+let elem2 = document.querySelector('#elem2');
+let elem3 = document.querySelector('#elem3');
+let elem4 = document.querySelector('#elem4');
+let elem5 = document.querySelector('#elem5');
+elem1.addEventListener('click', func);
+elem2.addEventListener('click', func);
+elem3.addEventListener('click', func);
+elem4.addEventListener('click', func);
+elem5.addEventListener('click', func);
+
+function func(){
+    this.textContent = this.textContent + '!!!';
+}
+
+
+let in1 = document.querySelector('#in1');
+let in2 = document.querySelector('#in2');
+let in3 = document.querySelector('#in3');
+in1.addEventListener('blur', func2);
+in2.addEventListener('blur', func2);
+in3.addEventListener('blur', func2);
+function func2(){
+    this.value = Math.pow(this.value, 2);
+}
