@@ -387,30 +387,52 @@
 
 // ⊗jsPmDmEGG
 
-let elem = document.querySelectorAll('#elem');
-let button = document.querySelector('#button');
-button.addEventListener('click', function(){
-    for (let el of elem) {
-        el.textContent = 'text';
-    }
-})
+// let elem = document.querySelectorAll('#elem');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', function(){
+//     for (let el of elem) {
+//         el.textContent = 'text';
+//     }
+// })
 
-let elem1 = document.querySelectorAll('#elem1');
-let button1 = document.querySelector('#button1');
-button1.addEventListener('click', function(){
-    let count = 1;
-    for(let el of elem1) {
-        el.textContent = el.textContent + count;
-        count++;
-    }
-})
+// let elem1 = document.querySelectorAll('#elem1');
+// let button1 = document.querySelector('#button1');
+// button1.addEventListener('click', function(){
+//     let count = 1;
+//     for(let el of elem1) {
+//         el.textContent = el.textContent + count;
+//         count++;
+//     }
+// })
 
 
-let number1 = document.querySelector('#number1');
-let number2 = document.querySelector('#number2');
-let number3 = document.querySelector('#number3');
-let result = document.querySelector('#result');
-let sum = document.querySelector('#sum');
-sum.addEventListener('click', function(){
-    result.textContent = +number1.value + +number2.value + +number3.value;
-})
+// let number1 = document.querySelector('#number1');
+// let number2 = document.querySelector('#number2');
+// let number3 = document.querySelector('#number3');
+// let result = document.querySelector('#result');
+// let sum = document.querySelector('#sum');
+// sum.addEventListener('click', function(){
+//     result.textContent = +number1.value + +number2.value + +number3.value;
+// })
+
+
+
+// ⊗jsPmDmLNH
+
+
+let input = document.querySelectorAll('input');
+for (let elem of input) {
+    elem.addEventListener('blur', func);
+}
+function func(){
+    this.value = Number(this.value) + 1;
+}
+
+
+let number = document.querySelectorAll('p');
+for(let elem of number) {
+    elem.addEventListener('click', func);
+}
+function func(){
+    this.textContent = Math.pow(this.textContent, 2); 
+}
