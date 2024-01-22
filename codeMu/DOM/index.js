@@ -440,9 +440,29 @@
 
 // ⊗jsPmDmLAH
 
-let divs = document.querySelectorAll('div');
-for(let elem of divs) {
-    elem.addEventListener('click', function(){
-        this.textContent++;
-    })
-}
+// let divs = document.querySelectorAll('div');
+// for(let elem of divs) {
+//     elem.addEventListener('click', function(){
+//         this.textContent++;
+//     })
+// }
+
+
+// ⊗jsPmDmHU
+// let link = document.querySelector('#link');
+// let button = document.querySelector('#button');
+// button.addEventListener('click', func);
+// function func(){
+//     link.textContent = link.textContent + ' ' + link.href;
+//     this.removeEventListener('click', func);
+// }
+
+
+// let button1 = document.querySelector('#button1');
+// button1.addEventListener('click', func);
+// function func() {
+//     button1.textContent++;
+//     if (button1.textContent == 10) {
+//         button1.removeEventListener('click', func);
+//         }
+// }
