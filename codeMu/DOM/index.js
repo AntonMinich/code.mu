@@ -466,3 +466,14 @@
 //         button1.removeEventListener('click', func);
 //         }
 // }
+
+
+// ⊗jsPmDmLHU
+let elem = document.querySelectorAll('p');
+for (let el of elem) {
+    el.addEventListener('click', func);
+}
+function func(){
+    this.textContent += '!';
+    this.removeEventListener('click', func);
+}
