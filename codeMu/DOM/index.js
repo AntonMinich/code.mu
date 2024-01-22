@@ -469,11 +469,25 @@
 
 
 // ⊗jsPmDmLHU
-let elem = document.querySelectorAll('p');
-for (let el of elem) {
-    el.addEventListener('click', func);
-}
-function func(){
-    this.textContent += '!';
-    this.removeEventListener('click', func);
+// let elem = document.querySelectorAll('p');
+// for (let el of elem) {
+//     el.addEventListener('click', func);
+// }
+// function func(){
+//     this.textContent += '!';
+//     this.removeEventListener('click', func);
+// }
+
+
+// ⊗jsPmDmAHU
+
+let list = document.querySelectorAll('li');
+for (let li of list){
+    li.addEventListener('click', function func(){
+        this.textContent++;
+        if (this.textContent >= 10) {
+            this.removeEventListener('click', func);
+        }
+        
+    })
 }
