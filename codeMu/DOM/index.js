@@ -481,13 +481,33 @@
 
 // ⊗jsPmDmAHU
 
-let list = document.querySelectorAll('li');
-for (let li of list){
-    li.addEventListener('click', function func(){
-        this.textContent++;
-        if (this.textContent >= 10) {
-            this.removeEventListener('click', func);
-        }
+// let list = document.querySelectorAll('li');
+// for (let li of list){
+//     li.addEventListener('click', function func(){
+//         this.textContent++;
+//         if (this.textContent >= 10) {
+//             this.removeEventListener('click', func);
+//         }
         
+//     })
+// }
+
+
+// ⊗jsPmDmCdg
+let list = document.querySelectorAll('li');
+let result = document.querySelector('#result');
+
+
+for (let lis of list) {
+    lis.addEventListener('click', function func(){
+        let sum = 0;
+        let arr = this.textContent.split('');
+        for (let i = 0; i < arr.length; i++) {
+            sum += +arr[i];          
+        }  
+        if (sum == 6) {
+            result.textContent = +result.textContent + +this.textContent;
+          }
+      
     })
 }
