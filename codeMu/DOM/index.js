@@ -494,20 +494,153 @@
 
 
 // ⊗jsPmDmCdg
-let list = document.querySelectorAll('li');
-let result = document.querySelector('#result');
+// let list = document.querySelectorAll('li');
+// let result = document.querySelector('#result');
 
 
-for (let lis of list) {
-    lis.addEventListener('click', function func(){
-        let sum = 0;
-        let arr = this.textContent.split('');
-        for (let i = 0; i < arr.length; i++) {
-            sum += +arr[i];          
-        }  
-        if (sum == 6) {
-            result.textContent = +result.textContent + +this.textContent;
-          }
+// for (let lis of list) {
+//     lis.addEventListener('click', function func(){
+//         let sum = 0;
+//         let arr = this.textContent.split('');
+//         for (let i = 0; i < arr.length; i++) {
+//             sum += +arr[i];          
+//         }  
+//         if (sum == 6) {
+//             result.textContent = +result.textContent + +this.textContent;
+//           }
       
-    })
-}
+//     })
+// }
+
+// ⊗jsPmDmMst
+// let elems = document.querySelectorAll('p');
+// for (let elem of elems){
+//     elem.addEventListener('click', function func(){
+//         this.textContent += '!';
+//         elem.removeEventListener('click', func);
+//     })
+
+// }
+
+
+// let elems = document.querySelectorAll('p');
+
+// for (let elem of elems) {
+// 	elem.addEventListener('click', function func() {
+// 		this.textContent = Number(this.textContent) + +1;
+// 	});
+// }
+
+
+
+// let button = document.querySelector('button');
+// let elem   = document.querySelector('p');
+
+// button.addEventListener('click', function() {
+// 	elem.innerHTML = '<b>' + elem.innerHTML + '</b>';
+// });
+
+
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('p');
+
+// button.addEventListener('click', function() {
+// 	let sum = 0;
+	
+// 	for (let elem of elems) {
+// 		sum += Number(elem.textContent);
+// 	}
+	
+// 	alert(sum);
+// });
+
+
+
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('p');
+
+// button.addEventListener('click', function() {
+// 	for (let elem of elems) {
+// 		elem.innerHTML = '<b>'+elem.innerHTML+'</b>';
+// 	}
+// })
+
+
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('p');
+// let sum = 0;
+
+// for (let elem of elems) {
+// 	sum += Number(elem.textContent);
+	
+// 	button.addEventListener('click', function() {
+// 		alert(sum);
+// 	});
+// }
+
+
+// let button = document.querySelector('button');
+// let elems  = document.querySelectorAll('input');
+// let sum = 0;
+
+// button.addEventListener('click', function() {
+//     for (let elem of elems) {
+//         sum += +elem.value;
+//     }
+//     alert(sum);
+// })
+
+
+// let btn  = document.querySelector('#btn');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+// let inp3 = document.querySelector('#inp3');
+
+// btn.addEventListener('click', function() {
+// 	inp3.value = +inp1.value + +inp2.value;
+// })
+
+
+// let btn  = document.querySelector('#btn');
+// let res  = document.querySelector('#res');
+// let inp1 = document.querySelector('#inp1');
+// let inp2 = document.querySelector('#inp2');
+
+// btn.addEventListener('click', function() {
+// 	res.textContent = +inp1.value + +inp2.value;
+// });
+
+
+// let inputs = document.querySelectorAll('input')
+// let button = document.querySelector('#btn')
+
+// button.addEventListener('click',function() {
+// 	for (let input of inputs) {
+// 		if (input.value === input.dataset.text) {
+// 			input.classList.add('right')
+// 		} else {
+// 			input.classList.add('wrong')
+// 		}
+// 	}
+// });
+
+
+
+let inputs = document.querySelectorAll('input')
+let button = document.querySelector('#btn')
+
+let texts = [
+	'text1',
+	'text2',
+	'text3',
+];
+
+button.addEventListener('click', function() {
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].value === texts[i]) {
+            inputs[i].classList.add('right');
+        } else {
+            inputs[i].classList.add('wrong');
+        }
+    }
+});
