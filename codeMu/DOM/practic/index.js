@@ -99,3 +99,91 @@ button9.addEventListener('click', function(){
         input9.value = 'Не палиндром'
     }
 })
+
+
+
+let input10 = document.querySelector('#input10');
+input10.addEventListener('blur', function(){
+    let result = input10.value.split('').some(elem => elem == 3);
+    alert(result);
+})
+
+let elem11 = document.querySelectorAll('#elem11');
+let button11 = document.querySelector('#button11');
+button11.addEventListener('click', function(){
+    let count = 1;
+    for (let elem of elem11){
+        elem.textContent = count++;
+    }
+})
+
+
+let elem12 = document.querySelectorAll('#elem12');
+let button12 = document.querySelector('#button12');
+button12.addEventListener('click', function(){
+    for (let elem of elem12){
+        elem.textContent += ' ' + '(' + elem.getAttribute('href') + ')';
+    }
+})
+
+let elem13 = document.querySelectorAll('.elem13');
+let button13 = document.querySelector('#button13');
+
+button13.addEventListener('click', function () {
+    for (let elem of elem13) {
+        if (elem.getAttribute('href').startsWith('http://')) {
+            elem.innerHTML += ' &rarr;';
+        }
+    }
+});
+
+
+let elem14 = document.querySelectorAll('.elem14');
+for(let elem of elem14) {
+    elem.addEventListener('click', function(){
+        this.textContent = Math.pow(this.textContent, 2);
+})
+}
+
+
+let elem15 = document.querySelector('#elem15');
+elem15.addEventListener('blur', function(){
+    let arr = elem15.value.split('.');
+    let date = new Date(arr[2], arr[1]-1, arr[0]);
+    alert(date.getDay());
+})
+
+
+let elem16 = document.querySelector('#elem16');
+let button161 = document.querySelector('#btn161');
+let button162 = document.querySelector('#btn162');
+
+button161.addEventListener('click', function(){
+    elem16.value = Number(elem16.value) + Number(1);
+})
+
+button162.addEventListener('click', function func(){
+    if (elem16.value == 0) {
+        // button162.removeEventListener('click', func);
+        elem16.value = Number(elem16.value)
+    } else {
+        elem16.value = Number(elem16.value) - Number(1);
+    }
+})
+
+
+
+let input17 = document.querySelector('#input17');
+let clack = document.querySelectorAll('.clack');
+for (let elem of clack){
+    elem.addEventListener('click', function(){
+        input17.value = Number(1) + +input17.value;
+    })
+}
+    
+let elem18 = document.querySelectorAll('.elem18');
+for (let elem of elem18) {
+    elem.addEventListener('click', function(){
+        elem.textContent = elem.textContent.slice(0,10) + '...';
+    })
+}
