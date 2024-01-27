@@ -187,3 +187,39 @@ for (let elem of elem18) {
         elem.textContent = elem.textContent.slice(0,10) + '...';
     })
 }
+
+let elem19 = document.querySelector('#elem19');
+let button19 = document.querySelector('#button19');
+button19.addEventListener('click', function(){
+    let random = Math.round(Math.random()*Math.pow(10000,2));
+    elem19.value = random;
+})
+
+
+let elem20 = document.querySelector('#elem20');
+let button20 = document.querySelector('#button20');
+button20.addEventListener('click', function(){
+    let arr = elem20.value.split('');
+    let newArr = arr.sort().join('');
+    elem20.value = newArr;
+})
+
+let elem21 = document.querySelector('#elem21');
+let p21 = document.querySelector('#p21');
+let button21 = document.querySelector('#button21');
+
+button21.addEventListener('click', function(){
+    p21.textContent = (elem21.value - 32) * 5/9;
+})
+
+
+let elem22 = document.querySelector('#elem22');
+let p22 = document.querySelector('#p22');
+let button22 = document.querySelector('#button22');
+button22.addEventListener('click', function(){
+    let number = elem22.value;
+    function factorial(number) {
+        return (number != 1) ? number * factorial(number - 1) : 1;
+      }
+        p22.textContent = factorial(number);
+})
