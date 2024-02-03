@@ -1,0 +1,16 @@
+#parent {
+    width: 500px;
+    height: 500px;
+    border: solid red;
+}
+
+#block {
+    width: 200px;
+    height: 200px;
+    border: dashed gray;
+    margin: 0 auto;
+}
+
+#block:not(.active) {
+	display: none;
+}
